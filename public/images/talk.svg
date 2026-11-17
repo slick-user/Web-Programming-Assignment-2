@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" role="img" aria-label="Talk illustration with a microphone and stage">
+  <rect width="480" height="270" fill="#fbe8db"/>
+  <circle cx="380" cy="70" r="90" fill="#f6d6bf"/>
+  <rect x="60" y="190" width="360" height="18" rx="9" fill="#8c3f18"/>
+  <rect x="215" y="120" width="50" height="70" rx="10" fill="#135c55"/>
+  <circle cx="240" cy="100" r="34" fill="#135c55"/>
+  <rect x="232" y="62" width="16" height="20" rx="6" fill="#0c423d"/>
+  <path d="M196 128v18a44 44 0 0 0 88 0v-18" fill="none" stroke="#d9652f" stroke-width="8" stroke-linecap="round"/>
+  <path d="M240 166v24m-24 0h48" stroke="#d9652f" stroke-width="8" stroke-linecap="round"/>
+</svg>

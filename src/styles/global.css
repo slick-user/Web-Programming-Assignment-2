@@ -1,0 +1,78 @@
+/* Design tokens. Original palette: deep teal + warm coral on warm paper. */
+:root {
+  --color-ink: #16232b;
+  --color-muted: #5b6b74;
+  --color-bg: #f6f3ec;
+  --color-surface: #ffffff;
+  --color-border: #d9dedb;
+
+  --color-primary: #135c55;
+  --color-primary-strong: #0c423d;
+  --color-primary-soft: #e4f0ec;
+
+  --color-accent: #d9652f;
+  --color-accent-soft: #fbe8db;
+  --color-accent-ink: #8c3f18;
+
+  --color-danger: #a3322b;
+  --color-danger-soft: #fae7e4;
+  --color-success: #1f6b45;
+  --color-success-soft: #e4f1e8;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+
+  --shadow-soft: 0 10px 30px rgba(22, 35, 43, 0.08);
+
+  --font-sans: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+
+  color: var(--color-ink);
+  background: var(--color-bg);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-top: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+/* Keyboard users get a clearly visible focus ring on every interactive element. */
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}

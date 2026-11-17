@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" role="img" aria-label="Workshop illustration with a notebook and pencil">
+  <rect width="480" height="270" fill="#e4f0ec"/>
+  <circle cx="90" cy="60" r="100" fill="#d3e7df"/>
+  <rect x="120" y="70" width="210" height="140" rx="10" fill="#ffffff" stroke="#135c55" stroke-width="6" transform="rotate(-5 225 140)"/>
+  <path d="M160 105h130M160 132h130M160 159h80" stroke="#9db9b1" stroke-width="8" stroke-linecap="round" transform="rotate(-5 225 140)"/>
+  <rect x="330" y="60" width="20" height="150" rx="8" fill="#d9652f" transform="rotate(18 340 135)"/>
+  <path d="m336 210-6 24 16-14z" fill="#8c3f18"/>
+</svg>

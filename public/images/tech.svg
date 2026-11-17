@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" role="img" aria-label="Tech illustration with a computer screen">
+  <rect width="480" height="270" fill="#e4f0ec"/>
+  <circle cx="80" cy="230" r="90" fill="#d3e7df"/>
+  <rect x="105" y="55" width="270" height="160" rx="14" fill="#135c55"/>
+  <rect x="121" y="71" width="238" height="128" rx="6" fill="#0c423d"/>
+  <path d="M150 100h70M150 126h120M150 152h90" stroke="#7fc5ad" stroke-width="9" stroke-linecap="round"/>
+  <rect x="200" y="215" width="80" height="12" rx="6" fill="#135c55"/>
+  <rect x="165" y="227" width="150" height="12" rx="6" fill="#135c55"/>
+</svg>

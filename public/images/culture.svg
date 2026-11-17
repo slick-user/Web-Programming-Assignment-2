@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" role="img" aria-label="Culture illustration with a paint palette">
+  <rect width="480" height="270" fill="#fbe8db"/>
+  <circle cx="400" cy="220" r="100" fill="#f6d6bf"/>
+  <path d="M240 60c-80 0-140 52-140 116 0 52 42 76 82 62 26-9 26-38 58-38s32 29 58 38c40 14 82-10 82-62C380 112 320 60 240 60z" fill="#ffffff" stroke="#8c3f18" stroke-width="6"/>
+  <circle cx="160" cy="135" r="18" fill="#135c55"/>
+  <circle cx="220" cy="105" r="18" fill="#d9652f"/>
+  <circle cx="285" cy="110" r="18" fill="#e0b13b"/>
+  <circle cx="330" cy="160" r="18" fill="#5d8b7f"/>
+  <circle cx="200" cy="175" r="18" fill="#a3322b"/>
+</svg>

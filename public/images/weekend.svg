@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" role="img" aria-label="Weekend illustration with mountains and a sun">
+  <rect width="480" height="270" fill="#e4f0ec"/>
+  <circle cx="370" cy="80" r="46" fill="#d9652f"/>
+  <path d="M0 270 150 90l90 100 60-60 180 140z" fill="#5d8b7f"/>
+  <path d="M110 130 150 90l40 45-40 20z" fill="#f6f3ec"/>
+  <path d="M0 270 130 150l110 120z" fill="#135c55"/>
+  <path d="M0 270h480v-24H0z" fill="#0c423d"/>
+</svg>

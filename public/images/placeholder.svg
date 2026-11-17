@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 270" role="img" aria-label="TicketNest placeholder illustration">
+  <rect width="480" height="270" fill="#e4f0ec"/>
+  <circle cx="400" cy="40" r="90" fill="#cfe3dc"/>
+  <circle cx="60" cy="240" r="70" fill="#cfe3dc"/>
+  <rect x="150" y="70" width="180" height="130" rx="14" fill="#135c55" transform="rotate(-6 240 135)"/>
+  <path d="M174 108h132M174 134h132M174 160h88" stroke="#f6f3ec" stroke-width="10" stroke-linecap="round" transform="rotate(-6 240 135)"/>
+  <text x="240" y="245" text-anchor="middle" font-family="Segoe UI, sans-serif" font-size="18" font-weight="700" fill="#135c55">TicketNest</text>
+</svg>
