@@ -1,16 +1,24 @@
-import styles from './App.module.css';
+import { Route, Routes } from 'react-router-dom';
+import Layout from './components/Layout.jsx';
+import HomePage from './pages/HomePage.jsx';
+import EventsPage from './pages/EventsPage.jsx';
+import EventDetailsPage from './pages/EventDetailsPage.jsx';
+import CheckoutPage from './pages/CheckoutPage.jsx';
+import ConfirmationPage from './pages/ConfirmationPage.jsx';
+import NotFoundPage from './pages/NotFoundPage.jsx';
 
-// Placeholder shell for Milestone 1. Routing and the real layout are added in Milestone 2.
+// The layout wraps every route; Outlet decides which page appears in the middle.
 export default function App() {
   return (
-    <main className={styles.setup}>
-      <p className={styles.eyebrow}>Islamabad · workshops, talks &amp; weekend plans</p>
-      <h1 className={styles.title}>TicketNest</h1>
-      <p className={styles.lead}>
-        Project setup is ready. Event browsing, registration and confirmation arrive in the next
-        milestone.
-      </p>
-      <p className={styles.note}>All orders on this site are simulated.</p>
-    </main>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="events" element={<EventsPage />} />
+        <Route path="events/:id" element={<EventDetailsPage />} />
+        <Route path="checkout" element={<CheckoutPage />} />
+        <Route path="confirmation" element={<ConfirmationPage />} />
+        <Route path="*" element={<NotFoundPage />} />
+      </Route>
+    </Routes>
   );
 }

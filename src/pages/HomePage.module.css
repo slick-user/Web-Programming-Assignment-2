@@ -1,0 +1,101 @@
+.page {
+  padding-top: clamp(1rem, 5vh, 3rem);
+}
+
+.hero {
+  padding: clamp(1.75rem, 6vw, 4rem);
+  background: var(--color-primary-strong);
+  color: #f6f3ec;
+  border-radius: var(--radius-lg);
+}
+
+.eyebrow {
+  margin-bottom: 1rem;
+  color: #9fd1bf;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.title {
+  max-width: 20ch;
+  margin-bottom: 1rem;
+  font-size: clamp(2.2rem, 7vw, 4.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+.lead {
+  max-width: 44rem;
+  margin-bottom: 1.75rem;
+  color: #d7e6e0;
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
+  line-height: 1.6;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.primary,
+.secondary {
+  display: inline-block;
+  padding: 0.7rem 1.2rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.primary {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.secondary {
+  border: 1px solid #7fb3a5;
+  color: #f6f3ec;
+}
+
+.steps {
+  margin-top: 2.5rem;
+}
+
+.sectionTitle {
+  font-size: 1.4rem;
+}
+
+.stepList {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stepList li {
+  padding: 0.9rem 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-muted);
+  line-height: 1.5;
+}
+
+.stepList strong {
+  color: var(--color-ink);
+}
+
+.note {
+  margin-top: 2rem;
+  color: var(--color-muted);
+  font-size: 0.85rem;
+}
+
+@media (min-width: 48rem) {
+  .stepList {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

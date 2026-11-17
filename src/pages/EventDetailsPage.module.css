@@ -1,0 +1,141 @@
+.page {
+  padding-top: 0.5rem;
+}
+
+.back {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.card {
+  overflow: hidden;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.image {
+  height: clamp(160px, 30vw, 300px);
+}
+
+.content {
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.eyebrow {
+  margin-bottom: 0.6rem;
+  color: var(--color-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.content h1 {
+  max-width: 30ch;
+  margin-bottom: 1rem;
+  font-size: clamp(1.6rem, 4.5vw, 2.5rem);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  overflow-wrap: anywhere;
+}
+
+.description {
+  margin-bottom: 1.5rem;
+  color: var(--color-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.facts {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0 0 1.5rem;
+  padding: 1.25rem;
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+}
+
+.facts div {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 0.5rem;
+}
+
+.facts dt {
+  font-weight: 700;
+}
+
+.facts dd {
+  margin: 0;
+  color: var(--color-muted);
+  overflow-wrap: anywhere;
+}
+
+.feeNote {
+  padding: 0.9rem 1rem;
+  background: var(--color-primary-soft);
+  border-radius: var(--radius-sm);
+  color: var(--color-primary-strong);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.primary {
+  display: inline-block;
+  margin-top: 1.25rem;
+  padding: 0.75rem 1.3rem;
+  background: var(--color-primary);
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.soldOut {
+  margin: 1.25rem 0 0;
+  padding: 0.9rem 1rem;
+  background: var(--color-danger-soft);
+  border-radius: var(--radius-sm);
+  color: var(--color-danger);
+}
+
+.soldOut a {
+  font-weight: 700;
+}
+
+.message {
+  max-width: 40rem;
+  margin: clamp(1rem, 8vh, 5rem) auto;
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.message a {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.retry {
+  padding: 0.6rem 1rem;
+  background: var(--color-primary);
+  border: 0;
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+@media (max-width: 32rem) {
+  .facts div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.1rem;
+  }
+}

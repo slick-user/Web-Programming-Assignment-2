@@ -1,0 +1,25 @@
+.notice {
+  width: min(100%, 40rem);
+  margin: clamp(1rem, 8vh, 5rem) auto;
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+}
+
+.notice h1 {
+  margin-bottom: 0.75rem;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  line-height: 1.15;
+}
+
+.notice p {
+  color: var(--color-muted);
+  line-height: 1.6;
+}
+
+.notice a {
+  color: var(--color-primary);
+  font-weight: 700;
+}
