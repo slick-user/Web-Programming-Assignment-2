@@ -2,7 +2,7 @@
 
 A simulated ticketing and registration site for small events in Islamabad (workshops, talks and weekend activities). Students and young professionals can find an event, choose tickets, register, and receive a confirmation. **Every order is simulated — no real payment is taken and no personal data is stored.**
 
-> Status: Milestone 2 of 5. This README is a skeleton; edge-case steps, the concept map and the decision record are completed in the final milestone.
+> Status: Milestone 3 of 5. This README is a skeleton; edge-case steps, the concept map and the decision record are completed in the final milestone.
 
 **Student:** [Your Name]
 **Roll number:** [Your Roll Number]
@@ -59,6 +59,11 @@ npm test             # runs: node --test
 - Routes, shared header/footer layout, home page, and a details page with a helpful invalid-id message.
 - Listing page with search, category filter, "available only" filter and sort, all stored in the URL query string.
 - Async mock loader in `src/api/` with loading, error and Retry states.
+- Shared cart in `src/context/CartContext.jsx`: Context + `useReducer`, persisted as `{ id, quantity }` only.
+- Pure rules in `src/rules/`: `checkCapacity` (max 6 and seats remaining), `checkEligibility` (age and prerequisites) and `calculateSummary` (fees and group discount) shared by the UI and the tests.
+- Quantity steppers on details and checkout that disable `+` at the real maximum; live price breakdown on both pages.
+- Controlled registration form with specific validation messages and preserved valid input; simulated confirmation with a reference stored without personal data.
+- `tests/ticketLimit.test.js` covering the ticket-limit rule with `node:test` and `node:assert/strict`.
 
 ## To be completed
 

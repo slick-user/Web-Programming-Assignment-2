@@ -115,3 +115,34 @@
   font-weight: 700;
   text-decoration: none;
 }
+
+.addRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.add {
+  padding: 0.5rem 0.8rem;
+  background: var(--color-primary);
+  border: 0;
+  border-radius: var(--radius-sm);
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.add:disabled {
+  background: var(--color-bg);
+  color: var(--color-muted);
+  cursor: not-allowed;
+}
+
+.chosen {
+  color: var(--color-success);
+  font-size: 0.8rem;
+  font-weight: 700;
+}

@@ -1,0 +1,53 @@
+.summary {
+  padding: 1.25rem;
+  background: var(--color-primary-strong);
+  color: #f6f3ec;
+  border-radius: var(--radius-md);
+}
+
+.summary h2 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.rows {
+  display: grid;
+  gap: 0.6rem;
+  margin: 0;
+}
+
+.rows div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.rows dt {
+  color: #cfe0da;
+}
+
+.rows dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+.total {
+  padding-top: 0.7rem;
+  border-top: 1px solid #6b9b8f;
+  font-size: 1.1rem;
+}
+
+.note {
+  margin: 1rem 0 0;
+  font-size: 0.85rem;
+  color: #d7e6e0;
+}
+
+.simulated {
+  margin: 0.5rem 0 0;
+  padding: 0.5rem 0.7rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 700;
+}

@@ -1,0 +1,103 @@
+.page {
+  width: min(100%, 38rem);
+  margin: clamp(1rem, 8vh, 5rem) auto;
+  padding: clamp(1.5rem, 5vw, 2.5rem);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+
+.check {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  background: var(--color-success-soft);
+  color: var(--color-success);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.page h1 {
+  margin-bottom: 0.5rem;
+  font-size: clamp(1.7rem, 5vw, 2.3rem);
+}
+
+.lead {
+  margin-bottom: 1.5rem;
+  color: var(--color-muted);
+}
+
+.details {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0 0 1.25rem;
+  padding: 1.25rem;
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  text-align: left;
+}
+
+.details div {
+  display: grid;
+  grid-template-columns: 12rem minmax(0, 1fr);
+  gap: 0.5rem;
+}
+
+.details dt {
+  font-weight: 700;
+}
+
+.details dd {
+  margin: 0;
+}
+
+.reference {
+  color: var(--color-primary);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  overflow-wrap: anywhere;
+}
+
+.note {
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.primary,
+.secondary {
+  padding: 0.7rem 1.1rem;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.secondary {
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+}
+
+@media (max-width: 32rem) {
+  .details div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.1rem;
+  }
+}

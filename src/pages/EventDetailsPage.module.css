@@ -85,6 +85,54 @@
   line-height: 1.5;
 }
 
+.choose {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.chooseTitle {
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+}
+
+.quantityLabel {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.breakdown {
+  display: grid;
+  gap: 0.5rem;
+  max-width: 26rem;
+  margin: 1.25rem 0 0;
+  padding: 1rem;
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+}
+
+.breakdown div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.breakdown dt {
+  color: var(--color-muted);
+}
+
+.breakdown dd {
+  margin: 0;
+  font-weight: 700;
+}
+
+.breakdown .total {
+  padding-top: 0.5rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-primary-strong);
+  font-size: 1.05rem;
+}
+
 .primary {
   display: inline-block;
   margin-top: 1.25rem;
