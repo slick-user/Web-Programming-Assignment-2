@@ -9,8 +9,8 @@ data is stored.**
 
 **Student:** [Your Name]  
 **Roll number:** [Your Roll Number]  
-**GitHub:** [GitHub Link]  
-**Deployment:** [Deployment Link]
+**GitHub:** https://github.com/slick-user/Web-Programming-Assignment-2  
+**Deployment:** https://web-programming-assignment-2-beta.vercel.app
 
 ## Install and run
 
