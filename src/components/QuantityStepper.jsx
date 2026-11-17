@@ -4,7 +4,8 @@ import styles from './QuantityStepper.module.css';
 // The limit is shown beside the control and the + button stops at the real maximum.
 export default function QuantityStepper({ event, value, onChange, inputId }) {
   const { allowedMax } = checkCapacity(value || 1, event.seatsRemaining);
-  const atMax = value >= allowedMax;
+  const overLimit = value > allowedMax;
+  const atMax = value === allowedMax;
 
   return (
     <div className={styles.wrap}>
@@ -21,7 +22,7 @@ export default function QuantityStepper({ event, value, onChange, inputId }) {
         <button
           type="button"
           onClick={() => onChange(value + 1)}
-          disabled={atMax}
+          disabled={value >= allowedMax}
           aria-label={`Add one ticket for ${event.title}`}
         >
           +
@@ -32,7 +33,11 @@ export default function QuantityStepper({ event, value, onChange, inputId }) {
         {allowedMax === 0
           ? 'Sold out — no tickets can be added.'
           : `Limit: ${allowedMax} ticket${allowedMax === 1 ? '' : 's'} per booking (${event.seatsRemaining} seats left).`}
-        {atMax && allowedMax > 0 ? ' Maximum reached.' : ''}
+        {overLimit
+          ? ' Your saved quantity is above the current limit — reduce it.'
+          : atMax && allowedMax > 0
+            ? ' Maximum reached.'
+            : ''}
       </p>
     </div>
   );

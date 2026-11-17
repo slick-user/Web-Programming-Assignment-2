@@ -1,8 +1,10 @@
 import { useCallback, useEffect, useState } from 'react';
 import { loadEvents } from './events.js';
+import { useDemo } from '../context/DemoContext.jsx';
 
 // Shared loading/error state for the listing and details pages.
 export function useEvents() {
+  const { failLoad, seatScenario } = useDemo();
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -15,7 +17,7 @@ export function useEvents() {
     setLoading(true);
     setError(null);
 
-    loadEvents()
+    loadEvents({ failLoad, seatScenario })
       .then((data) => {
         if (!ignore) setEvents(data);
       })
@@ -29,7 +31,7 @@ export function useEvents() {
     return () => {
       ignore = true;
     };
-  }, [attempt]);
+  }, [attempt, failLoad, seatScenario]);
 
   return { events, loading, error, reload };
 }

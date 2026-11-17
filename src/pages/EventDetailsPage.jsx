@@ -3,7 +3,7 @@ import { useEvents } from '../api/useEvents.js';
 import EventImage from '../components/EventImage.jsx';
 import QuantityStepper from '../components/QuantityStepper.jsx';
 import { useCart } from '../context/CartContext.jsx';
-import { calculatePricing } from '../rules/pricing.js';
+import { allInPrice, calculatePricing } from '../rules/pricing.js';
 import { availabilityLabel, formatDate, formatPKR } from '../utils/format.js';
 import styles from './EventDetailsPage.module.css';
 
@@ -78,8 +78,8 @@ export default function EventDetailsPage() {
               </div>
             )}
             <div>
-              <dt>Ticket price</dt>
-              <dd>{formatPKR(event.price)}</dd>
+              <dt>All-in / ticket</dt>
+              <dd>{formatPKR(allInPrice(event.price))}</dd>
             </div>
           </dl>
 

@@ -1,4 +1,5 @@
 import { Link, NavLink, Outlet } from 'react-router-dom';
+import DemoControls from './DemoControls.jsx';
 import styles from './Layout.module.css';
 
 export default function Layout() {
@@ -30,6 +31,10 @@ export default function Layout() {
           <span className={styles.simulated}>Simulated site</span>
         </div>
       </header>
+
+      <div className={styles.demoBar}>
+        <DemoControls />
+      </div>
 
       <main className={styles.main}>
         <Outlet />

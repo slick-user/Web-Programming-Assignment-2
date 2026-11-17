@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import EventImage from './EventImage.jsx';
 import { useCart } from '../context/CartContext.jsx';
+import { allInPrice, calculatePricing } from '../rules/pricing.js';
 import { availabilityLabel, formatDate, formatPKR } from '../utils/format.js';
 import styles from './EventCard.module.css';
 
@@ -10,6 +11,9 @@ export default function EventCard({ event }) {
   const soldOut = event.seatsRemaining === 0;
   const low = !soldOut && event.seatsRemaining <= 3;
   const atMax = quantity >= Math.min(6, event.seatsRemaining);
+  // Same pricing rule as details and checkout: the first price people see is the real one.
+  const single = allInPrice(event.price);
+  const groupEach = Math.round(calculatePricing(4, event.price).total / 4);
 
   return (
     <article className={styles.card}>
@@ -37,9 +41,11 @@ export default function EventCard({ event }) {
           {event.prerequisite ? ' · Prior session required' : ''}
         </p>
 
+        <p className={styles.groupHint}>{formatPKR(groupEach)} each for 4+ tickets</p>
+
         <div className={styles.bottomRow}>
           <p className={styles.price}>
-            <strong>{formatPKR(event.price)}</strong> <span>before fees</span>
+            <strong>{formatPKR(single)}</strong> <span>all-in / ticket</span>
           </p>
           <Link className={styles.details} to={`/events/${event.id}`}>
             Details <span aria-hidden="true">→</span>

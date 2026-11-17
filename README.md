@@ -2,7 +2,7 @@
 
 A simulated ticketing and registration site for small events in Islamabad (workshops, talks and weekend activities). Students and young professionals can find an event, choose tickets, register, and receive a confirmation. **Every order is simulated — no real payment is taken and no personal data is stored.**
 
-> Status: Milestone 3 of 5. This README is a skeleton; edge-case steps, the concept map and the decision record are completed in the final milestone.
+> Status: Milestone 4 of 5. This README is a skeleton; edge-case steps, the concept map and the decision record are completed in the final milestone.
 
 **Student:** [Your Name]
 **Roll number:** [Your Roll Number]
@@ -64,6 +64,9 @@ npm test             # runs: node --test
 - Quantity steppers on details and checkout that disable `+` at the real maximum; live price breakdown on both pages.
 - Controlled registration form with specific validation messages and preserved valid input; simulated confirmation with a reference stored without personal data.
 - `tests/ticketLimit.test.js` covering the ticket-limit rule with `node:test` and `node:assert/strict`.
+- All-in price shown on the first screen (cards and details), with the group price beside it.
+- `DemoControls` in the shared layout: force a loading failure or change seat availability to reproduce the three problems.
+- Restored-selection conflict warning on checkout with one-click "Reduce to N" / "Remove" fixes.
 
 ## To be completed
 

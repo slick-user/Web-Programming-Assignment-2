@@ -67,7 +67,7 @@ export default function EventsPage() {
     <div className={styles.page}>
       <header className={styles.heading}>
         <h1>Events in Islamabad</h1>
-        <p>Workshops, talks and weekend plans. Prices shown are before the service fee.</p>
+        <p>Workshops, talks and weekend plans. Prices include the service fee; groups of 4+ save 10%.</p>
       </header>
 
       <form className={styles.filters} aria-label="Filter events" onSubmit={(event) => event.preventDefault()}>

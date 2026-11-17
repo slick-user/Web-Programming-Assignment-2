@@ -72,6 +72,11 @@ export default function CheckoutPage() {
   );
   const needsPrerequisite = selected.some((event) => event.prerequisite);
 
+  // Availability may have changed since the cart was saved (the demo controls can force this).
+  const conflicts = selected
+    .map((event) => ({ event, check: checkCapacity(event.quantity, event.seatsRemaining) }))
+    .filter(({ check }) => !check.valid);
+
   function updateField(name, value) {
     setForm((current) => ({ ...current, [name]: value }));
   }
@@ -118,6 +123,44 @@ export default function CheckoutPage() {
           <div className={styles.mainColumn}>
             <section className={styles.panel} aria-labelledby="selection-heading">
               <h2 id="selection-heading">Your tickets</h2>
+
+              {conflicts.length > 0 && (
+                <div className={styles.conflict} role="alert">
+                  <h3>Your saved selection needs attention</h3>
+                  <p>
+                    Availability changed since you chose these tickets. Fix each item below before
+                    registering.
+                  </p>
+                  {conflicts.map(({ event, check }) => (
+                    <div key={event.id} className={styles.conflictRow}>
+                      <p><strong>{event.title}</strong> — {check.message}</p>
+                      <div className={styles.conflictActions}>
+                        {check.allowedMax > 0 && (
+                          <button
+                            type="button"
+                            onClick={() =>
+                              dispatch({
+                                type: 'set',
+                                id: event.id,
+                                quantity: check.allowedMax,
+                                max: event.seatsRemaining,
+                              })
+                            }
+                          >
+                            Reduce to {check.allowedMax}
+                          </button>
+                        )}
+                        <button
+                          type="button"
+                          onClick={() => dispatch({ type: 'remove', id: event.id })}
+                        >
+                          Remove
+                        </button>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
 
               {selected.length === 0 ? (
                 <div className={styles.empty} role="status">

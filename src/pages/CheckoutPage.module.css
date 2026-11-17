@@ -48,6 +48,61 @@
   font-size: 0.85rem;
 }
 
+.conflict {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background: var(--color-accent-soft);
+  border: 1px solid var(--color-accent);
+  border-radius: var(--radius-sm);
+}
+
+.conflict h3 {
+  margin-bottom: 0.4rem;
+  color: var(--color-accent-ink);
+  font-size: 1rem;
+}
+
+.conflict > p {
+  margin: 0 0 0.75rem;
+  color: var(--color-accent-ink);
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.conflictRow {
+  display: grid;
+  gap: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--color-accent);
+}
+
+.conflictRow + .conflictRow {
+  margin-top: 0.75rem;
+}
+
+.conflictRow p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.conflictActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.conflictActions button {
+  padding: 0.45rem 0.8rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-accent-ink);
+  border-radius: var(--radius-sm);
+  color: var(--color-accent-ink);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
 .ticketList {
   display: grid;
   gap: 1rem;
