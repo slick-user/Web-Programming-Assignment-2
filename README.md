@@ -7,8 +7,8 @@ data is stored.**
 
 > Status: Complete — Milestone 5 of 5. The decision record is in [`DECISIONS.md`](DECISIONS.md).
 
-**Student:** [Your Name]  
-**Roll number:** [Your Roll Number]  
+**Student:** Azlan Ali Khan  
+**Roll number:** 24I-2110  
 **GitHub:** https://github.com/slick-user/Web-Programming-Assignment-2  
 **Deployment:** https://web-programming-assignment-2-beta.vercel.app
 
